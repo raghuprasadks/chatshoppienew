@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clevex UI-kit Home Page Slider - Slider Revolution</title>
+    <meta name="description" content="Slider Revolution Example"/>
+    <meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition"/>
+    <meta name="author" content="ThemePunch"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- LOAD JQUERY LIBRARY -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+
+    <!-- LOADING FONTS AND ICONS -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:600%2C500%2C400%7COpen+Sans:400" rel="stylesheet"
+          property="stylesheet" type="text/css" media="all">
+
+
+    <link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
+    <!-- REVOLUTION LAYERS STYLES -->
+    <style>
+
+
+    </style>
+    <style></style>
+    <style type="text/css">
+        .hermes.tp-bullets {
+        }
+
+        .hermes .tp-bullet {
+            overflow: hidden;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+            -webkit-transition: background 0.3s ease;
+            transition: background 0.3s ease;
+            position: absolute
+        }
+
+        .hermes .tp-bullet:hover {
+            background-color: rgba(0, 0, 0, 0.21)
+        }
+
+        .hermes .tp-bullet:after {
+            content: ' ';
+            position: absolute;
+            bottom: 0;
+            height: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 1px rgb(255, 255, 255);
+            -webkit-transition: height 0.3s ease;
+            transition: height 0.3s ease
+        }
+
+        .hermes .tp-bullet.selected:after {
+            height: 100%
+        }
+    </style>
+
+
+    <!-- ADD-ONS CSS FILES -->
+
+    <!-- ADD-ONS JS FILES -->
+
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript">function setREVStartSize(e) {
+        try {
+            var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+            if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                    f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                var u = (e.c.width(), jQuery(window).height());
+                if (void 0 != e.fullScreenOffsetContainer) {
+                    var c = e.fullScreenOffsetContainer.split(",");
+                    if (c) jQuery.each(c, function (e, i) {
+                        u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                    }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                }
+                f = u
+            } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+            e.c.closest(".rev_slider_wrapper").css({height: f})
+        } catch (d) {
+            console.log("Failure at Presize of Slider:" + d)
+        }
+    };</script>
+</head>
+
+<body style="margin: 0; padding: 0">
+
+
+<div id="rev_slider_8_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+     data-alias="clevex-home-page-slider" data-source="gallery"
+     style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+    <!-- START REVOLUTION SLIDER 5.4.5 fullwidth mode -->
+    <div id="rev_slider_8_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.5">
+        <ul>    <!-- SLIDE  -->
+            <li data-index="rs-47" data-transition="notransition" data-slotamount="default" data-hideafterloop="0"
+                data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
+                data-thumb="assets/100x50_0ba57-image-1.jpg" data-delay="9000" data-rotate="0" data-fstransition="fade"
+                data-fsmasterspeed="500" data-fsslotamount="7" data-saveperformance="off" data-title="Slide"
+                data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                data-param8="" data-param9="" data-param10="" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="assets/dummy.png" alt="" data-lazyload="assets/0ba57-image-1.jpg"
+                     data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off"
+                     class="rev-slidebg" data-no-retina>
+                <!-- LAYERS -->
+
+                <!-- LAYER NR. 1 -->
+                <h1 class="tp-caption   tp-resizeme"
+                    id="slide-47-layer-1"
+                    data-x="40"
+                    data-y="100"
+                    data-width="['auto']"
+                    data-height="['auto']"
+
+                    data-type="text"
+                    data-responsive_offset="on"
+
+                    data-frames='[{"delay":1280,"speed":1200,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+6220","speed":800,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Linear.easeNone"}]'
+                    data-textAlign="['inherit','inherit','inherit','inherit']"
+                    data-paddingtop="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+
+                    style="z-index: 5; white-space: nowrap; font-size: 40px; line-height: 36px; font-weight: 600; color: #000000; letter-spacing: 0px;font-family:Montserrat;text-transform:uppercase;">
+                    kick start you app
+                </h1>
+
+                <!-- LAYER NR. 2 -->
+                <p class="tp-caption   tp-resizeme"
+                   id="slide-47-layer-2"
+                   data-x="40"
+                   data-y="158"
+                   data-width="['453']"
+                   data-height="['auto']"
+
+                   data-type="text"
+                   data-responsive_offset="on"
+
+                   data-frames='[{"delay":2060,"speed":1000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"+5640","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Back.easeIn"}]'
+                   data-textAlign="['inherit','inherit','inherit','inherit']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+
+                   style="z-index: 6; min-width: 453px; max-width: 453px; white-space: normal; font-size: 20px; line-height: 30px; font-weight: 500; color: #333333; letter-spacing: 0px;font-family:Montserrat;">
+                    Why to start from scratch when you can save time and money? </p>
+
+                <!-- LAYER NR. 3 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-47-layer-4"
+                      data-x="39"
+                      data-y="264"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":2500,"speed":800,"frame":"0","from":"y:bottom;rX:-20deg;rY:-20deg;rZ:0deg;","to":"o:1;","ease":"Cubic.easeInOut"},{"delay":"+5400","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"easeInOutElastic"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 7; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(255,177,33);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-thumbs-up"></i> </span>
+
+                <!-- LAYER NR. 4 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-47-layer-5"
+                      data-x="110"
+                      data-y="280"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":4000,"speed":800,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+3900","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 8; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 500; color: #333333; letter-spacing: 0px;font-family:Montserrat;">120+ Unique Pages </span>
+
+                <!-- LAYER NR. 5 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-47-layer-6"
+                      data-x="40"
+                      data-y="335"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":2900,"speed":800,"frame":"0","from":"y:bottom;rZ:90deg;sX:2;sY:2;","to":"o:1;","ease":"Cubic.easeInOut"},{"delay":"+5000","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"easeInOutElastic"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 9; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(36,216,66);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-cloud"></i> </span>
+
+                <!-- LAYER NR. 6 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-47-layer-7"
+                      data-x="110"
+                      data-y="352"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":4400,"speed":800,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+3500","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 10; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 500; color: #333333; letter-spacing: 0px;font-family:Montserrat;">24 Nice UI Plugins </span>
+
+                <!-- LAYER NR. 7 -->
+                <div class="tp-caption   tp-resizeme"
+                     id="slide-47-layer-8"
+                     data-x="40"
+                     data-y="406"
+                     data-width="['50']"
+                     data-height="['50']"
+
+                     data-type="text"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"delay":3300,"speed":800,"frame":"0","from":"y:bottom;rZ:90deg;sX:2;sY:2;","to":"o:1;rY:180;","ease":"Cubic.easeInOut"},{"delay":"+4600","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","ease":"Back.easeIn"}]'
+                     data-textAlign="['center','center','center','center']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 11; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(35,127,255);border-radius:100% 100% 100% 100%;">
+                    <i class="pe-7s-copy-file"></i></div>
+
+                <!-- LAYER NR. 8 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-47-layer-9"
+                      data-x="110"
+                      data-y="423"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":4800,"speed":800,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+3100","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 12; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 500; color: #333333; letter-spacing: 0px;font-family:Montserrat;">Documentation & Support </span>
+
+                <!-- LAYER NR. 9 -->
+                <div class="tp-caption   tp-resizeme"
+                     id="slide-47-layer-19"
+                     data-x="546"
+                     data-y="157"
+                     data-width="['none','none','none','none']"
+                     data-height="['none','none','none','none']"
+
+                     data-type="image"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"delay":4500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"+2700","speed":800,"frame":"999","to":"auto:auto;","ease":"Power2.easeInOut"}]'
+                     data-textAlign="['inherit','inherit','inherit','inherit']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 13;"><img src="assets/dummy.png" alt="" data-ww="631px" data-hh="353px"
+                                               data-lazyload="assets/11a2b-preview.png" data-no-retina></div>
+            </li>
+            <!-- SLIDE  -->
+            <li data-index="rs-44" data-transition="fadetorightfadefromleft" data-slotamount="default"
+                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
+                data-masterspeed="1000" data-thumb="" data-delay="7200" data-rotate="0" data-saveperformance="off"
+                data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5=""
+                data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="assets/dummy.png" data-bgcolor='#ffc600' style='background:#ffc600' alt=""
+                     data-lazyload="assets/transparent.png" data-bgposition="center center" data-bgfit="cover"
+                     data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                <!-- LAYERS -->
+
+                <!-- LAYER NR. 10 -->
+                <div class="tp-caption   tp-resizeme"
+                     id="slide-44-layer-1"
+                     data-x="40"
+                     data-y="200"
+                     data-width="['auto']"
+                     data-height="['auto']"
+
+                     data-type="text"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"delay":1290,"speed":1250,"frame":"0","from":"y:bottom;rX:-20deg;rY:-20deg;rZ:0deg;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"+4450","speed":800,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Linear.easeNone"}]'
+                     data-textAlign="['inherit','inherit','inherit','inherit']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 5; white-space: nowrap; font-size: 48px; line-height: 48px; font-weight: 600; color: #000000; letter-spacing: 0px;font-family:Montserrat;">
+                    e-Commerce Store
+                </div>
+
+                <!-- LAYER NR. 11 -->
+                <p class="tp-caption   tp-resizeme"
+                   id="slide-44-layer-2"
+                   data-x="40"
+                   data-y="265"
+                   data-width="['453']"
+                   data-height="['auto']"
+
+                   data-type="text"
+                   data-responsive_offset="on"
+
+                   data-frames='[{"delay":2410,"speed":1200,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"+3380","speed":800,"frame":"999","to":"y:[100%];rZ:0deg;sX:0.7;sY:0.7;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                   data-textAlign="['inherit','inherit','inherit','inherit']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+
+                   style="z-index: 6; min-width: 453px; max-width: 453px; white-space: normal; font-size: 22px; line-height: 30px; font-weight: 500; color: #000000; letter-spacing: 0px;font-family:Montserrat;">
+                    Build your e-Commerce store easily with all
+                    products listing, detail, cart and many other
+                    pages supported by clevex. </p>
+
+                <!-- LAYER NR. 12 -->
+                <div class="tp-caption   tp-resizeme"
+                     id="slide-44-layer-17"
+                     data-x="right" data-hoffset="92"
+                     data-y="center" data-voffset="-2"
+                     data-width="['none','none','none','none']"
+                     data-height="['none','none','none','none']"
+
+                     data-type="image"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"delay":2820,"speed":1500,"frame":"0","from":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0;sY:0;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+2670","speed":800,"frame":"999","to":"auto:auto;","ease":"Linear.easeNone"}]'
+                     data-textAlign="['inherit','inherit','inherit','inherit']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 7;"><img src="assets/dummy.png" alt="" data-ww="594px" data-hh="356px"
+                                              data-lazyload="assets/2da62-laptop.png" data-no-retina></div>
+            </li>
+            <!-- SLIDE  -->
+            <li data-index="rs-45" data-transition="fadefromleft,fadefromright" data-slotamount="default,default"
+                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default,default"
+                data-easeout="default,default" data-masterspeed="1000,default" data-thumb="" data-delay="8940"
+                data-rotate="0,0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2=""
+                data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
+                data-param10="" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="assets/dummy.png" data-bgcolor='#04cfed' style='background:#04cfed' alt=""
+                     data-lazyload="assets/transparent.png" data-bgposition="center center" data-bgfit="cover"
+                     data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                <!-- LAYERS -->
+
+                <!-- LAYER NR. 13 -->
+                <div class="tp-caption   tp-resizeme"
+                     id="slide-45-layer-1"
+                     data-x="40"
+                     data-y="180"
+                     data-width="['auto']"
+                     data-height="['auto']"
+
+                     data-type="text"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"delay":1580,"speed":1000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+6160","speed":500,"frame":"999","to":"y:[100%];rZ:0deg;sX:0.7;sY:0.7;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"nothing"}]'
+                     data-textAlign="['inherit','inherit','inherit','inherit']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 5; white-space: nowrap; font-size: 40px; line-height: 36px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;text-transform:uppercase;">
+                    Limitless Possibilities
+                </div>
+
+                <!-- LAYER NR. 14 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-45-layer-4"
+                      data-x="38"
+                      data-y="265"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":2590,"speed":1210,"frame":"0","from":"y:bottom;rX:-20deg;rY:-20deg;rZ:0deg;","to":"o:1;","ease":"Cubic.easeInOut"},{"delay":"+4940","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"easeInOutElastic"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 6; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(61,65,63);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-underline"></i> </span>
+
+                <!-- LAYER NR. 15 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-45-layer-5"
+                      data-x="111"
+                      data-y="279"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":4400,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+3340","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">Bootstrap & Custom Designed UI Elements </span>
+
+                <!-- LAYER NR. 16 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-45-layer-6"
+                      data-x="40"
+                      data-y="335"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":3220,"speed":850,"frame":"0","from":"y:bottom;rZ:90deg;sX:2;sY:2;","to":"o:1;","ease":"Cubic.easeInOut"},{"delay":"+4670","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"easeInOutElastic"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 8; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(243,129,129);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-copy"></i> </span>
+
+                <!-- LAYER NR. 17 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-45-layer-7"
+                      data-x="110"
+                      data-y="350"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":4800,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+2940","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 9; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">20+ Unique Pages </span>
+
+                <!-- LAYER NR. 18 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-45-layer-8"
+                      data-x="38"
+                      data-y="405"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":3600,"speed":850,"frame":"0","from":"y:bottom;rZ:90deg;sX:2;sY:2;","to":"o:1;rY:180;","ease":"Cubic.easeInOut"},{"delay":"+4290","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","ease":"Back.easeIn"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 10; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(255,177,33);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-sliders"></i> </span>
+
+                <!-- LAYER NR. 19 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-45-layer-9"
+                      data-x="107"
+                      data-y="421"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":5200,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+2530","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 11; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">Easy Slider with Revolution Slider </span>
+
+                <!-- LAYER NR. 20 -->
+                <div class="tp-caption   tp-resizeme"
+                     id="slide-45-layer-17"
+                     data-x="579"
+                     data-y="156"
+                     data-width="['none','none','none','none']"
+                     data-height="['none','none','none','none']"
+
+                     data-type="image"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"delay":4920,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+2330","speed":800,"frame":"999","to":"auto:auto;","ease":"Linear.easeNone"}]'
+                     data-textAlign="['inherit','inherit','inherit','inherit']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 12;"><img src="assets/dummy.png" alt="" data-ww="575px" data-hh="364px"
+                                               data-lazyload="assets/2da62-laptop.png" data-no-retina></div>
+            </li>
+            <!-- SLIDE  -->
+            <li data-index="rs-51" data-transition="fadefromleft,fadefromright" data-slotamount="default,default"
+                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default,default"
+                data-easeout="default,default" data-masterspeed="1000,default"
+                data-thumb="assets/100x50_6d9ce-banner-1.jpg" data-delay="9000" data-rotate="0,0"
+                data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3=""
+                data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
+                data-param10="" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="assets/dummy.png" alt="" data-lazyload="assets/6d9ce-banner-1.jpg"
+                     data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off"
+                     class="rev-slidebg" data-no-retina>
+                <!-- LAYERS -->
+
+                <!-- LAYER NR. 21 -->
+                <h1 class="tp-caption   tp-resizeme"
+                    id="slide-51-layer-1"
+                    data-x="40"
+                    data-y="120"
+                    data-width="['auto']"
+                    data-height="['auto']"
+
+                    data-type="text"
+                    data-responsive_offset="on"
+
+                    data-frames='[{"delay":970,"speed":1050,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+6680","speed":800,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Linear.easeNone"}]'
+                    data-textAlign="['inherit','inherit','inherit','inherit']"
+                    data-paddingtop="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+
+                    style="z-index: 5; white-space: nowrap; font-size: 40px; line-height: 36px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;text-transform:uppercase;">
+                    Easy Blogging
+                </h1>
+
+                <!-- LAYER NR. 22 -->
+                <p class="tp-caption   tp-resizeme"
+                   id="slide-51-layer-19"
+                   data-x="43"
+                   data-y="185"
+                   data-width="['auto']"
+                   data-height="['auto']"
+
+                   data-type="text"
+                   data-responsive_offset="on"
+
+                   data-frames='[{"delay":1970,"speed":1100,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+5630","speed":800,"frame":"999","to":"auto:auto;","ease":"Linear.easeNone"}]'
+                   data-textAlign="['inherit','inherit','inherit','inherit']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+
+                   style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;">
+                    A fresh look & feel of the bloggin </p>
+
+                <!-- LAYER NR. 23 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-51-layer-4"
+                      data-x="40"
+                      data-y="265"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":3000,"speed":1000,"frame":"0","from":"y:bottom;rX:-20deg;rY:-20deg;rZ:0deg;","to":"o:1;","ease":"Cubic.easeInOut"},{"delay":"+4700","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"easeInOutElastic"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 7; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(255,177,33);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-list-alt"></i> </span>
+
+                <!-- LAYER NR. 24 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-51-layer-5"
+                      data-x="110"
+                      data-y="279"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":4400,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+3300","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 8; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">Listing & Massonary View </span>
+
+                <!-- LAYER NR. 25 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-51-layer-6"
+                      data-x="40"
+                      data-y="335"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":3300,"speed":1000,"frame":"0","from":"y:bottom;rZ:90deg;sX:2;sY:2;","to":"o:1;","ease":"Cubic.easeInOut"},{"delay":"+4400","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"easeInOutElastic"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 9; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(3,183,66);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-file-code-o"></i> </span>
+
+                <!-- LAYER NR. 26 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-51-layer-7"
+                      data-x="110"
+                      data-y="351"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":4800,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+2900","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 10; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">Blog Detail Page </span>
+
+                <!-- LAYER NR. 27 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-51-layer-8"
+                      data-x="40"
+                      data-y="405"
+                      data-width="['50']"
+                      data-height="['50']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":3600,"speed":1000,"frame":"0","from":"y:bottom;rZ:90deg;sX:2;sY:2;","to":"o:1;rY:180;","ease":"Cubic.easeInOut"},{"delay":"+4100","speed":800,"frame":"999","to":"rZ:0deg;sX:0.7;sY:0.7;opacity:0;","ease":"Back.easeIn"}]'
+                      data-textAlign="['center','center','center','center']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 11; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; white-space: nowrap; font-size: 24px; line-height: 50px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;background-color:rgb(52,152,219);border-radius:100% 100% 100% 100%;"><i
+                        class="fa-icon-tasks"></i> </span>
+
+                <!-- LAYER NR. 28 -->
+                <span class="tp-caption   tp-resizeme"
+                      id="slide-51-layer-9"
+                      data-x="110"
+                      data-y="421"
+                      data-width="['auto']"
+                      data-height="['auto']"
+
+                      data-type="text"
+                      data-responsive_offset="on"
+
+                      data-frames='[{"delay":5200,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+2500","speed":800,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                      data-textAlign="['inherit','inherit','inherit','inherit']"
+                      data-paddingtop="[0,0,0,0]"
+                      data-paddingright="[0,0,0,0]"
+                      data-paddingbottom="[0,0,0,0]"
+                      data-paddingleft="[0,0,0,0]"
+
+                      style="z-index: 12; white-space: nowrap; font-size: 16px; line-height: 18px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">Specially Designed Widgets </span>
+
+                <!-- LAYER NR. 29 -->
+                <div class="tp-caption   tp-resizeme"
+                     id="slide-51-layer-17"
+                     data-x="519"
+                     data-y="113"
+                     data-width="['none','none','none','none']"
+                     data-height="['none','none','none','none']"
+
+                     data-type="image"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"delay":5010,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+2190","speed":800,"frame":"999","to":"auto:auto;","ease":"Linear.easeNone"}]'
+                     data-textAlign="['inherit','inherit','inherit','inherit']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 13;"><img src="assets/dummy.png" alt="" data-ww="648px" data-hh="410px"
+                                               data-lazyload="assets/2da62-laptop.png" data-no-retina></div>
+            </li>
+        </ul>
+        <div class="tp-bannertimer" style="height: 7px; background: rgba(255,255,255,0.25);"></div>
+    </div>
+</div><!-- END REVOLUTION SLIDER -->
+<script type="text/javascript">
+    var revapi8,
+        tpj = jQuery;
+    tpj(document).ready(function () {
+        if (tpj("#rev_slider_8_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_8_1");
+        } else {
+            revapi8 = tpj("#rev_slider_8_1").show().revolution({
+                sliderType: "standard",
+                jsFileLocation: "//localhost/rev-editor/revslider/public/assets/js/",
+                sliderLayout: "fullwidth",
+                dottedOverlay: "none",
+                delay: 9000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    mouseScrollReverse: "default",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "on",
+                        touchOnDesktop: "off",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 50,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    }
+                    ,
+                    bullets: {
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_under: 600,
+                        style: "hermes",
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        container: "layergrid",
+                        h_align: "left",
+                        v_align: "bottom",
+                        h_offset: 45,
+                        v_offset: 50,
+                        space: 5,
+                        tmp: ''
+                    }
+                },
+                visibilityLevels: [1240, 1024, 778, 480],
+                gridwidth: 1240,
+                gridheight: 600,
+                lazyType: "smart",
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    speedbg: 0,
+                    speedls: 0,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 47, 48, 49, 50, 51, 55],
+                },
+                shadow: 0,
+                spinner: "off",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "on",
+                autoHeight: "off",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                }
+            });
+        }
+    });
+    /*ready*/
+</script>
+
+
+</body>
+</html>

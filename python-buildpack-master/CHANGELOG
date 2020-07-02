@@ -1,0 +1,900 @@
+v1.6.29 Mar 04, 2019
+=====================
+
+* Add python 2.7.16, remove python 2.7.14
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/164359785)
+
+* Merge pull request #127 from pavankrish123/master
+  - Warn users to begin using AppDynamics via extension buildpack
+  - See: https://docs.pivotal.io/partners/appdynamics/multibuildpack.html
+
+* Write pydistutil.cfg with index-url, extra-index-url, and find_links
+  - This allows easy_install to respect arguments from requirements.txt
+  (https://www.pivotaltracker.com/story/show/151742300)
+
+* Add setuptools 40.8.0, remove setuptools 40.7.1
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/163738585)
+  (https://www.pivotaltracker.com/story/show/163682820)
+  (https://www.pivotaltracker.com/story/show/163642810)
+
+v1.6.28 Jan 31, 2019
+=====================
+
+* Remove InstallPip and use the pip that is bundled with python
+  (https://www.pivotaltracker.com/story/show/163494890)
+
+* Add setuptools 40.7.1, remove setuptools 40.7.0
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/163545642)
+
+* Add setuptools 40.7.0, remove setuptools 40.6.3
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/163504243)
+
+* Update pip-pop to support newer versions of pip
+  (https://www.pivotaltracker.com/story/show/163494890)
+
+* Use built version of go 1.11.4 in online unbuilt/URL buildpack
+  (https://www.pivotaltracker.com/story/show/163089977)
+
+v1.6.27 Jan 14, 2019
+=====================
+
+* Vendor with go modules
+  (https://www.pivotaltracker.com/story/show/162654926)
+
+v1.6.26 Jan 07, 2019
+=====================
+
+* Set the PIP_CERT environment variable in the staging container
+  (https://www.pivotaltracker.com/story/show/156283238)
+
+* Add miniconda3 4.5.12, remove miniconda3 4.5.11
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/162914580)
+
+* Add python 3.7.2, remove python 3.7.0
+  for stack(s) cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/162832331)
+
+* Add python 3.6.8, remove python 3.6.6
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/162832330)
+
+v1.6.25 Dec 18, 2018
+=====================
+
+* Add setuptools 40.6.3, remove setuptools 40.6.2
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/162589898)
+
+v1.6.24 Nov 26, 2018
+=====================
+
+* Add pymysql to list of packages that require libffi
+  (https://www.pivotaltracker.com/story/show/161554556)
+
+* Add pipenv 2018.11.26, remove pipenv 2018.10.13
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/162191120)
+  (https://www.pivotaltracker.com/story/show/161973946)
+
+* Fix bug in order to make pipenv install deterministic
+  (https://www.pivotaltracker.com/story/show/161267508)
+
+* Add setuptools 40.6.2, remove setuptools 40.5.0
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/161916774)
+  (https://www.pivotaltracker.com/story/show/161903843)
+
+* Handle recursive requirements in requirements.txt
+  (https://www.pivotaltracker.com/story/show/158115122)
+
+
+v1.6.23 Oct 29, 2018
+=====================
+
+* Add setuptools 40.5.0, remove setuptools 40.4.3
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/161512476)
+
+v1.6.22 Oct 23, 2018
+=====================
+
+* Add python 3.7.1
+  for stack(s) cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/161363050)
+
+* Add python 3.6.7, remove python 3.6.5
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/161363051)
+
+* Add pipenv 2018.10.13, remove pipenv 2018.7.1
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/161199971)
+  (https://www.pivotaltracker.com/story/show/161078648)
+
+* Add setuptools 40.4.3, remove setuptools 40.2.0
+  for stack(s) cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/160709589)
+  (https://www.pivotaltracker.com/story/show/160693994)
+  (https://www.pivotaltracker.com/story/show/160591668)
+  (https://www.pivotaltracker.com/story/show/160587221)
+  (https://www.pivotaltracker.com/story/show/160538834)
+
+* Add miniconda2 4.5.11, remove miniconda2 4.5.4
+  for stacks cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/160263384)
+
+* Add miniconda3 4.5.11, remove miniconda3 4.5.4
+  for stacks cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/160263390)
+
+v1.6.21 Aug 24, 2018
+=====================
+
+* Completely vendored python apps do not access the internet,
+  even if they use pipenv. (bugfix)
+  (https://www.pivotaltracker.com/story/show/158774977)
+
+* Add setuptools 40.2.0, remove setuptools 40.0.0
+  for stacks cflinuxfs2, cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/159925443)
+
+* Add python 3.7.0 for stacks cflinuxfs3
+  (https://www.pivotaltracker.com/story/show/159252658)
+
+* Add python 3.4.9, remove python 3.4.7
+  (https://www.pivotaltracker.com/story/show/159495910)
+
+* Add python 3.5.6, remove python 3.5.4
+  (https://www.pivotaltracker.com/story/show/159495911)
+
+v1.6.20 Jul 27, 2018
+=====================
+
+* Rebuild python 2.7.14, 2.7.15, 2.4.8, 3.5.5, 3.6.6
+  For stacks cflinuxfs2, cflinuxfs3
+
+* Rebuild pipenv 2018.7.1
+  For stacks cflinuxfs2, cflinuxfs3
+
+* Add setuptools 40.0.0
+  For stacks cflinuxfs3
+
+* Add miniconda2 4.5.4
+  For stacks cflinuxfs3
+
+* Add miniconda3 4.5.4
+  For stacks cflinuxfs3
+
+* Add libmemcache 1.0.18
+  For stacks cflinuxfs3
+
+* Add libffi 3.2.1
+  For stacks cflinuxfs3
+
+* Add pip-pop 0.1.1
+  For stacks cflinuxfs3
+
+
+v1.6.19 Jul 03, 2018
+=====================
+
+* Add pipenv 2018.7.1, remove pipenv 2018.6.25
+  (https://www.pivotaltracker.com/story/show/158751877)
+
+* Add python 3.6.6, remove python 3.6.4
+  (https://www.pivotaltracker.com/story/show/158679663)
+
+* Remove python 3.3.X version line
+  (https://www.pivotaltracker.com/story/show/157398230)
+
+v1.6.18 Jun 25, 2018
+=====================
+
+* Wildcard default version of python
+  (https://www.pivotaltracker.com/story/show/158597509)
+
+* Add pipenv 2018.6.25, remove pipenv 2018.5.18
+  (https://www.pivotaltracker.com/story/show/158602937)
+
+* Add miniconda2, miniconda3 4.5.4, remove miniconda2, miniconda3 4.5.1.
+  (https://www.pivotaltracker.com/story/show/158268924)
+
+v1.6.17 Jun 05, 2018
+=====================
+* Support packaging with associated stacks
+  (https://www.pivotaltracker.com/story/show/153256959)
+
+v1.6.16 May 23, 2018
+=====================
+
+* Add setuptools 39.2.0, remove setuptools 39.1.0
+  (https://www.pivotaltracker.com/story/show/157717519)
+
+* Update appdynamics integration test for lts support
+  (https://www.pivotaltracker.com/story/show/156813786)
+
+* add appdynamics support
+  (https://www.pivotaltracker.com/story/show/156813786)
+
+* Add pipenv 2018.5.18, remove pipenv 11.10.3
+  (https://www.pivotaltracker.com/story/show/157535551)
+  (https://www.pivotaltracker.com/story/show/157411231)
+
+* Add miniconda2 4.5.1, miniconda3 4.5.1, remove miniconda2 4.4.10, miniconda3 4.4.10.
+  (https://www.pivotaltracker.com/story/show/157264923)
+
+v1.6.15 May 08, 2018
+=====================
+
+* Add python 2.7.15, remove python 2.7.13
+  (https://www.pivotaltracker.com/story/show/157256894)
+
+* Add pipenv 11.10.3, remove pipenv 11.10.0
+  (https://www.pivotaltracker.com/story/show/157377335)
+  (https://www.pivotaltracker.com/story/show/157373855)
+  (https://www.pivotaltracker.com/story/show/157256911)
+
+* Add setuptools 39.1.0, remove setuptools 39.0.1
+  (https://www.pivotaltracker.com/story/show/157170351)
+
+
+v1.6.14 Apr 19, 2018
+=====================
+
+* Update pip from 9.0.1 to 9.0.3
+  (https://www.pivotaltracker.com/story/show/156864505)
+
+
+v1.6.13 Apr 16, 2018
+=====================
+
+* Add pipenv 11.10.0, remove pipenv 11.9.0
+  (https://www.pivotaltracker.com/story/show/156709510)
+
+v1.6.12 Apr 04, 2018
+=====================
+
+* Handle pre/post_compile scripts without shebangs.
+  (https://www.pivotaltracker.com/story/show/156381551)
+
+* Respect #! in pre/post_compile hooks
+  (https://www.pivotaltracker.com/story/show/156383007)
+
+* Add python 3.6.5, remove python 3.6.3
+  (https://www.pivotaltracker.com/story/show/156355841)
+
+* Refuse to install pipenv with Python 3.3.x
+  (https://www.pivotaltracker.com/story/show/156106004)
+
+* Only download pipenv when needed
+  (https://www.pivotaltracker.com/story/show/156133859)
+
+* Add pipenv 11.9.0, remove pipenv 11.1.4
+  (https://www.pivotaltracker.com/story/show/156156615)
+
+* Add setuptools 39.0.1, remove setuptools 38.5.2
+  (https://www.pivotaltracker.com/story/show/156110533)
+
+* Install libffi everytime we install pipenv
+  (https://www.pivotaltracker.com/story/show/156016877)
+
+v1.6.11 Mar 09, 2018
+=====================
+
+* Add pipenv 11.1.4, remove pipenv 10.1.0
+  (https://www.pivotaltracker.com/story/show/155817683)
+  (https://www.pivotaltracker.com/story/show/155592090)
+
+* Use manifest cache downloads
+  (https://www.pivotaltracker.com/story/show/155405429)
+
+* Add setuptools 38.5.2, remove setuptools 38.5.1
+  (https://www.pivotaltracker.com/story/show/155753390)
+
+v1.6.10 Feb 28, 2018
+=====================
+
+* Add pipenv 10.1.0, remove pipenv 9.0.3
+  (https://www.pivotaltracker.com/story/show/155490051)
+  (https://www.pivotaltracker.com/story/show/155362492)
+
+* Add miniconda 4.4.10, remove 4.3.30, 4.3.31
+  (https://www.pivotaltracker.com/story/show/155375170)
+
+* Document new buildpack-packager build command
+  (https://www.pivotaltracker.com/story/show/155223266)
+
+* Suggest a fix to user if pip fails and vendor exists
+  (https://www.pivotaltracker.com/story/show/155449364)
+
+v1.6.9 Feb 13, 2018
+====================
+
+* Add python 3.5.5, remove 3.5.3
+  (https://www.pivotaltracker.com/story/show/154908600)
+
+* Add python 3.4.8, remove 3.4.6
+  (https://www.pivotaltracker.com/story/show/154908600)
+
+* Enable manifest override yml
+  (https://www.pivotaltracker.com/story/show/153614649)
+
+* Add setuptools 38.5.1, remove setuptools 38.4.0
+  (https://www.pivotaltracker.com/story/show/154958496)
+  (https://www.pivotaltracker.com/story/show/154919979)
+
+v1.6.8 Jan 29, 2018
+====================
+
+* Set gunicorn to log to stdout by default
+  (https://www.pivotaltracker.com/story/show/154180824)
+
+* Set BP_DEBUG to increase verbosity of conda
+  (https://www.pivotaltracker.com/story/show/154262137)
+
+* Add pipenv 9.0.3, remove pipenv 9.0.1
+  (https://www.pivotaltracker.com/story/show/154368109)
+  (https://www.pivotaltracker.com/story/show/154364041)
+
+v1.6.7 Jan 16, 2018
+====================
+
+* Add miniconda 4.3.30, Remove miniconda 4.3.31
+  (https://www.pivotaltracker.com/story/show/153891779)
+
+* Add python 3.6.4, remove python 3.6.2
+  (https://www.pivotaltracker.com/story/show/154185617)
+
+* Add setuptools 38.4.0, remove setuptools 38.2.4
+  (https://www.pivotaltracker.com/story/show/154085830)
+  (https://www.pivotaltracker.com/story/show/154085065)
+  (https://www.pivotaltracker.com/story/show/153896853)
+
+v1.6.6 Dec 20, 2017
+====================
+
+* Add pipenv 9.0.1, remove pipenv 8.3.2
+  (https://www.pivotaltracker.com/story/show/153704827)
+
+v1.6.5 Dec 13, 2017
+====================
+
+* Setup tcl/tk for tkinter support
+  Rebuild python versions: 2.7.14, 3.3.7, 3.4.7, 3.5.4, 3.6.3
+  (https://www.pivotaltracker.com/story/show/153231455)
+
+* Add setuptools 38.2.4, remove setuptools 38.2.3
+  (https://www.pivotaltracker.com/story/show/153374171)
+
+v1.6.4 Dec 01, 2017
+====================
+
+* Allows users to set specific "setuptools" version in requirements.txt
+  Add "--ignore-installed" to pip install
+  (https://www.pivotaltracker.com/story/show/152297106)
+
+v1.6.3 Nov 30, 2017
+====================
+
+* Add setuptools 38.2.3, Remove setuptools 36.6.0
+  (https://www.pivotaltracker.com/story/show/153199150)
+
+* Add pipenv 8.3.2, Remove pipenv 8.3.1
+  (https://www.pivotaltracker.com/story/show/152573073)
+
+v1.6.2 Nov 06, 2017
+====================
+
+* Add miniconda 4.3.30, Remove miniconda 4.3.27
+  (https://www.pivotaltracker.com/story/show/152287064)
+
+* Update setuptools and pipenv
+  (https://www.pivotaltracker.com/story/show/152395352)
+
+* Minimize output during pip install
+
+* Verify dependency downloads using sha256 instead of md5
+  (https://www.pivotaltracker.com/story/show/151913767)
+
+* Store profile.d dir outside app directory on recent BAL
+  (https://www.pivotaltracker.com/story/show/151381713)
+
+v1.6.1 Oct 17, 2017
+====================
+
+* Allow apps without both requirements.txt and setup.py
+  (https://www.pivotaltracker.com/story/show/151542879)
+
+* Add python 3.6.3, remove python 3.6.1
+  (https://www.pivotaltracker.com/story/show/151657228)
+
+* Add python 3.3.7, remove python 3.3.5
+  (https://www.pivotaltracker.com/story/show/151206742)
+
+v1.5.27 Oct 10, 2017
+=====================
+
+* Convert buildpack to libbuildpack
+  (https://www.pivotaltracker.com/story/show/150823743)
+  (https://www.pivotaltracker.com/story/show/151599855)
+
+* Add miniconda 4.3.27, Remove miniconda 4.3.21
+  (https://www.pivotaltracker.com/story/show/151551565)
+
+* Don't change build directory during supply
+  (https://www.pivotaltracker.com/story/show/150823743)
+
+v1.5.26 Sep 27, 2017
+=====================
+
+* Add python 2.7.14, remove python 2.7.12
+  (https://www.pivotaltracker.com/story/show/151151348)
+
+v1.5.25 Sep 20, 2017
+=====================
+
+* Build python with dbm support
+  (https://www.pivotaltracker.com/story/show/151093546)
+
+v1.5.24 Aug 14, 2017
+=====================
+
+* Add python 3.5.4, remove python 3.5.2
+  (https://www.pivotaltracker.com/story/show/150040567)
+
+* Add python 3.4.7, remove python 3.4.5
+  (https://www.pivotaltracker.com/story/show/150077510)
+
+v1.5.23 Aug 07, 2017
+=====================
+
+* Provide pip/conda packages and nltk corpora during supply
+  (https://www.pivotaltracker.com/story/show/149435387)
+
+v1.5.22 Jul 24, 2017
+=====================
+
+* Add python 3.6.2, remove python 3.6.0
+  (https://www.pivotaltracker.com/story/show/148997417)
+
+v1.5.21 Jul 21, 2017
+=====================
+
+* Caching of supplied python
+  - Fix shebangs in supply (as well as finalize)
+  (https://www.pivotaltracker.com/story/show/148719733)
+
+* Add miniconda 4.3.21, remove miniconda 4.3.14
+  (https://www.pivotaltracker.com/story/show/146711659)
+
+* Ensure returns in runtime.txt do not affect version picking
+  (https://www.pivotaltracker.com/story/show/147966315)
+
+v1.5.20 Jun 28, 2017
+=====================
+
+* Fix app based pre and post compile hooks
+  (https://www.pivotaltracker.com/story/show/147611093)
+
+v1.5.19 Jun 05, 2017
+=====================
+
+* Add pipenv support
+  (https://www.pivotaltracker.com/story/show/141616409)
+
+* Add miniconda 4.3.14, remove miniconda 4.3.11
+  (https://www.pivotaltracker.com/story/show/145532683)
+
+* Add multi-buildpack support
+  (https://www.pivotaltracker.com/story/show/142852045)
+
+* Remove ucs2 python 2.7.x versions
+  (https://www.pivotaltracker.com/story/show/137791203)
+
+v1.5.18 Apr 11, 2017
+=====================
+
+* Support pre_compile and post_compile hooks when using Conda
+  (https://www.pivotaltracker.com/story/show/137634053)
+
+* Build python 2.7.x with ucs4 support
+  - ucs2 python 2.7.x versions are still included in the manifest
+  (https://www.pivotaltracker.com/story/show/140854911)
+
+v1.5.17 Mar 27, 2017
+=====================
+
+* Add python 3.6.1
+  (https://www.pivotaltracker.com/story/show/142309761)
+
+* Add support for supply buildpacks
+  (https://www.pivotaltracker.com/story/show/141616657)
+
+v1.5.16 Mar 03, 2017
+=====================
+
+* Allow usc2 version of python 2.x to be specified in runtime.txt
+  (https://www.pivotaltracker.com/story/show/140857561)
+
+* Add nltk support
+  (https://www.pivotaltracker.com/story/show/140311521)
+
+* Allow python version line to be specified in runtime.txt
+  - e.g. python-3.3.x
+  (https://www.pivotaltracker.com/story/show/140505663)
+
+* Fix buildpack so that to pip can install editable dependencies from requirements.txt
+  (https://www.pivotaltracker.com/story/show/139473831)
+
+* Add miniconda 4.3.11. remove miniconda 4.2.12
+  (https://www.pivotaltracker.com/story/show/139957205)
+
+* Add EOL dates for python
+  (https://www.pivotaltracker.com/story/show/137374307)
+
+v1.5.15 Jan 24, 2017
+=====================
+
+* Add python 3.5.3, remove python 3.5.1
+  (https://www.pivotaltracker.com/story/show/137773317)
+
+* Add python 3.4.6, remove python 3.4.4
+  (https://www.pivotaltracker.com/story/show/137773317)
+
+* Update default python version to 2.7.13
+  (https://www.pivotaltracker.com/story/show/136306637)
+
+v1.5.14 Jan 10, 2017
+=====================
+
+* Add warning if downloaded dependency is not the latest patch version for a
+given major and minor version
+  (https://www.pivotaltracker.com/story/show/134863437)
+
+* Add warning if buildpack version used to stage an app changes
+  (https://www.pivotaltracker.com/story/show/135234395)
+
+* Add python 3.6.0
+  (https://www.pivotaltracker.com/story/show/136606291)
+
+* Add python 2.7.13, remove python 2.7.11
+  (https://www.pivotaltracker.com/story/show/136306637)
+
+* Update setuptools version to 32.1.0
+  (https://www.pivotaltracker.com/story/show/136345251)
+
+* Update miniconda to 4.2.12
+  (https://www.pivotaltracker.com/story/show/135443165)
+
+* Update pip version to 9.0.1
+  (https://www.pivotaltracker.com/story/show/135025815)
+
+v1.5.13 Dec 01, 2016
+=====================
+
+* Rebuild and change path for python, libffi, and libmemcache binaries
+  - We identified a potential, but unlikely, attack vector in our continuous
+    integration system. Our own auditing strongly suggests that this attack
+    vector was not taken advantage of. However, out of an abundance of caution,
+    we are rebuilding all buildpack dependencies that we maintain.
+
+v1.5.12 Nov 11, 2016
+=====================
+
+* Ensure all downloaded binaries have checksums verified
+  (https://www.pivotaltracker.com/story/show/128099189)
+
+v1.5.11 Oct 19, 2016
+=====================
+
+* python-buildpack BOSH release now available on bosh.io at
+  http://bosh.io/releases/github.com/cloudfoundry/python-buildpack-release
+  (https://www.pivotaltracker.com/story/show/130040305)
+
+v1.5.10 Sep 19, 2016
+=====================
+
+* Remove Heroku references from staging output
+  (https://www.pivotaltracker.com/story/show/127931269)
+
+* Lock version of conda to 4.1.11
+  (https://www.pivotaltracker.com/story/show/119902339)
+
+v1.5.9 Aug 12, 2016
+====================
+
+* Add credential filtering for printed urls
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/126514693)
+
+* Add default_versions support for specifying python default version
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/126394947)
+
+* Make buildpacks.cloudfoundry.org the default url for buildpack dependencies
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/121757949)
+
+v1.5.8 Jun 28, 2016
+====================
+
+* Add python 2.7.12, remove python 2.7.10
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/122296441)
+
+* Add python 3.4.5, remove python 3.4.3
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/122378741)
+
+* Add python 3.5.2, remove python 3.5.0
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/122378741)
+
+v1.5.7 Jun 23, 2016
+====================
+
+* Stop updating the conda version
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/121852995)
+
+* Add Django Integration Test
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/119774643)
+
+* Suppress download progress text
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/121172013)
+
+* Cache dependencies when using miniconda and enivironment.yml doesn't change
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/119822023)
+
+v1.5.6 May 17, 2016
+====================
+
+* Allow the buildpack use miniconda when `environment.yml` is present
+  and there is internet connectivity.
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/118752873)
+
+v1.5.5 Mar 21, 2016
+====================
+
+* Increase the Python 3 timeout to 120 seconds.
+
+v1.5.4 Jan 07, 2016
+====================
+
+* Added 3.4.4, removed 3.4.2
+  (https://www.pivotaltracker.com/story/show/111145834)
+
+* Revert to v1.5.2 of pip-install script to prevent issue where
+  pip contacts the internet in the cached buildpack
+  (https://www.pivotaltracker.com/n/projects/1042066/stories/111018262)
+
+
+v1.5.3 Dec 17, 2015
+====================
+
+* Added 2.7.11 and 3.5.1, removed 2.7.9
+  (https://www.pivotaltracker.com/story/show/110082530)
+
+* Merged upstream with heroku 2a3962a
+  (https://www.pivotaltracker.com/story/show/109618254)
+
+v1.5.2 Nov 16, 2015
+====================
+
+* Developers are given detailed, helpful instructions when they attempt
+  to stage an application whose dependency is not found in the manifest.
+  (https://www.pivotaltracker.com/story/show/107939104)
+
+v1.5.1 Sep 15, 2015
+====================
+
+* Adding support for Python 3.5.0
+  (https://www.pivotaltracker.com/story/show/103268420)
+
+* Output buildpack information in detect script
+  (https://www.pivotaltracker.com/story/show/100757820)
+
+v1.5.0 Jul 20, 2015
+====================
+
+* Include CF built binaries
+  (https://www.pivotaltracker.com/story/show/97136960)
+
+* Include current stack in unsupported stack message
+  (https://www.pivotaltracker.com/story/show/98579464)
+
+* Update pip to 7.1.0
+
+* Update setuptools to 18.0.1
+
+* Set xtrace if $BUILDPACK_XTRACE set
+
+v1.4.0 Jun 24, 2015
+====================
+
+* Remove 2.7.8 from skinny manifest
+
+* Remove lucid-specific binaries from manifest.yml
+  (https://www.pivotaltracker.com/story/show/96135874)
+
+* alert user about incompatible stack usage
+  (https://www.pivotaltracker.com/story/show/96137338)
+
+v1.3.5 Jun 08, 2015
+====================
+
+ * Add python 2.7.10 to the full manifest
+
+v1.3.4 Jun 08, 2015
+====================
+
+* Add support for python 2.7.10
+
+* Merge upstream changes up to SHA 7d4093795bbd2028e34adcac2c6055e0195dff63
+
+v1.3.3 May 28, 2015
+====================
+
+* remove Python versions 3.2.x
+  (https://www.pivotaltracker.com/story/show/94530056)
+
+v1.3.2 May 21, 2015
+====================
+
+* Merge upstream changes from Heroku up to SHA 7fd3a047fdc7a5d0de7c796b1ce06131b84a6a1e 
+	(https://www.pivotaltracker.com/story/show/94986024)
+
+v1.3.1 May 07, 2015
+====================
+
+* Bump buildpack-packager to support custom buildpack manifests.
+  (https://www.pivotaltracker.com/story/show/93717296)
+
+v1.3.0 Apr 24, 2015
+====================
+
+* Deprecated many Python versions. Currently supported versions:
+	(https://www.pivotaltracker.com/story/show/90697224)
+	* 2.7.8
+	* 2.7.9
+	* 3.2.4
+	* 3.2.5
+	* 3.3.5
+	* 3.3.6
+	* 3.4.2
+	* 3.4.3
+
+* Merge upstream changes from Heroku up to SHA 5abe0d24fd24ad797c20c8b43d4cbf1bd2720186
+	(https://www.pivotaltracker.com/story/show/90537742)
+
+v1.2.0 Mar 17, 2015
+====================
+
+* Support cflinuxfs2 stack. Does not support 2.7.1 and 3.2.0
+  (https://www.pivotaltracker.com/story/show/88174352)
+  (https://www.pivotaltracker.com/story/show/90308418)
+
+* Reference git repos by https in cf.Gemfile
+  (https://www.pivotaltracker.com/story/show/90365848)
+
+* Add checksum to `manifest.yml` for all binaries.
+  (https://www.pivotaltracker.com/story/show/89503126)
+
+* Prevent use of app cached dependencies when stack is switched.
+  (https://www.pivotaltracker.com/story/show/89958540)
+
+v1.1.2 Feb 04, 2015
+====================
+
+* Merge upstream changes
+  * Upgrade pip version to 6.0.6 and setuptools version to 11.1
+    (https://github.com/heroku/heroku-buildpack-python/commit/26b54b690c3796198ed911f451a4b70c65d9b5f7)
+  * Add support for PyPy 3
+    (https://github.com/heroku/heroku-buildpack-python/pull/180)
+  * Change URLs to HTTPS
+    (https://github.com/heroku/heroku-buildpack-python/pull/194)
+
+* Update documentation for use in offline environments
+  (https://www.pivotaltracker.com/story/show/86952360)
+  (https://www.pivotaltracker.com/story/show/86853880)
+
+* Update buildpack-packager to v.2.0.0
+  (https://www.pivotaltracker.com/story/show/84805200)
+
+v1.1.1 Dec 15, 2014
+====================
+
+* Merge upstream changes
+  * Add Python 2.7.9
+  * Change default to Python 2.7.9
+
+* Complete introduction of new runtime dependency translation system
+  (https://www.pivotaltracker.com/story/show/84330782)
+
+v1.1.0 Dec 08, 2014
+====================
+
+* Merge upstream changes
+  (https://www.pivotaltracker.com/story/show/83960192)
+  * Add Python 3.3.6, 3.4.2
+  * Add PyPy 2.4.0
+  * Upgrade setuptools to version 7.0
+  * Add --enable-shared to Python runtime options
+    (https://github.com/cloudfoundry/python-buildpack/issues/7)
+    (https://github.com/heroku/heroku-buildpack-python/issues/181)
+  * Fix typo in libffi check
+    (https://github.com/cloudfoundry/python-buildpack/pull/5)
+    (https://github.com/heroku/heroku-buildpack-python/pull/176)
+
+* Introduce new offline dependency packaging system
+  (https://www.pivotaltracker.com/story/show/82513994)
+  (https://www.pivotaltracker.com/story/show/83886038)
+
+* Introduce new runtime dependency translation system
+  (https://www.pivotaltracker.com/story/show/82513994)
+  (https://www.pivotaltracker.com/story/show/83483872)
+  (https://www.pivotaltracker.com/story/show/83504664)
+
+* Update the README with Machete instructions
+  (https://www.pivotaltracker.com/story/show/82692644)
+
+v1.0.5 Oct 06, 2014
+====================
+
+* Merge Heroku upstream change.
+
+v1.0.4 Sep 30, 2014
+====================
+
+Resolve broken buildpack version output.
+  (https://www.pivotaltracker.com/story/show/79781536)
+  (https://www.pivotaltracker.com/n/projects/966314/stories/79702506)
+
+v1.0.3 Sep 29, 2014
+====================
+
+* Merges Heroku upstream change:
+  * Add bcrypt to the list of dependencies triggering libffi installation
+
+
+v1.0.2 Sep 05, 2014
+====================
+
+* Merges Heroku upstream changes, in particular:
+    * Support for Python 2.7.8
+    * Support for setuptools 5.4.1
+    * Improved Python 3 compatibility
+    * Solves readonly failures
+    * Adds crypto support
+  (https://www.pivotaltracker.com/story/show/76112924)
+
+* Bumps CF testing libraries
+
+
+v1.0.1 Jul 22, 2014
+====================
+
+* Improve documentation and make the README CF specific.
+  (https://www.pivotaltracker.com/story/show/69192654)
+  (https://www.pivotaltracker.com/story/show/73157760)
+
+* Switch to new Cloud Foundry offline dependency framework
+  (https://www.pivotaltracker.com/story/show/74053110)
+  (https://www.pivotaltracker.com/story/show/73384384)
+  (https://www.pivotaltracker.com/story/show/73723814)
+  (https://www.pivotaltracker.com/story/show/73544396)
+
+* Improve version imprinting
+  (https://www.pivotaltracker.com/story/show/73158908)
+
+* Use Ruby 2.1.1 for packaging
+
+* Fix: Bug in mercurial spec
+  (https://www.pivotaltracker.com/story/show/73544396)
+
+* Fix: Offline mode should not attempt to use public networks
+  (https://www.pivotaltracker.com/story/show/73420832)
+
+v1.0.0 Jun 17, 2014
+===================
+
+* Modify [the Heroku Python buildpack](https://github.com/heroku/heroku-buildpack-python) to
+  support offline mode.

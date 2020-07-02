@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: socketio-server
+Version: 0.0.9
+Summary: Quick and dirty socketio server for django
+Home-page: http://pypi.python.org/pypi/socketio-server/
+Author: John Leith
+Author-email: leith.john@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Django (<=1.5,>=1.4)
+Requires-Dist: gevent-socketio (>=0.3.4)
+
+Tools to get a socketio server running on a django site quickly
+
+install in settings.py
+
+    INSTALLED_APPS = (
+        ...
+        'socketio_server',
+        ...
+    )
+
+Then copy the socketio_settings.sample.py into the same dir as manage.py. 
+Change the settings to match your preference.
+
+Then run:
+
+    python manage.py socketio 
+
+to turn on the socketio server. You'll probably want to create your own
+namespace to run your custom socketio logic. Look to gevent_socketio for help.
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Registration</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Register</h1>
+    <!--
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+-->
+    <div class="form">
+        <form action="/" method="POST">
+            Name : <input type="text" name="name" id="name"><br>
+            Email : <input type="text" name="email" id="email"><br>
+            Password : <input type="password" name="password" id="password"><br>
+            <input type="submit" value="Register">
+        </form>
+        
+        
+        
+        
+        {% if info["message"]!=' ' %}
+            <h1> {{info["message"]}}</h1>
+        {% endif %}
+        <a href="/login">Login</a>
+    </div>
+</div>
+{% endblock %}

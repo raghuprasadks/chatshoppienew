@@ -1,0 +1,30 @@
+# Watson Assistant
+WORKSPACE_ID="33a981b1-6ce8-4143-a073-a901c5de9121"
+#WORKSPACE_ID="62b9d582-a557-4656-b618-e75c2c637fd7"
+ASSISTANT_URL="https://gateway-syd.watsonplatform.net/assistant/api"
+## Un-comment and use either username+password or IAM apikey.
+# ASSISTANT_USERNAME=<add_assistant_username>
+# ASSISTANT_PASSWORD=<add_assistant_password>
+ASSISTANT_IAM_APIKEY="cuDE1vsM98Xbs3c9q7ISxqZIfRp3WeUKlzac8rsI86bC"
+
+# Cloudant DB
+CLOUDANT_USERNAME="9da704c7-f678-4c15-a485-67404a35e77b-bluemix"
+CLOUDANT_PASSWORD="7861ebf41a6e5276cb08fb17e1da9dc5fc39cdc397dfc39959a9e4f584c697a5"
+CLOUDANT_DB_NAME="amq"
+CLOUDANT_URL="https://9da704c7-f678-4c15-a485-67404a35e77b-bluemix:7861ebf41a6e5276cb08fb17e1da9dc5fc39cdc397dfc39959a9e4f584c697a5@9da704c7-f678-4c15-a485-67404a35e77b-bluemix.cloudant.com"
+
+# Watson Discovery
+DISCOVERY_URL="https://gateway-syd.watsonplatform.net/discovery/api"
+DISCOVERY_ENVIRONMENT_ID="84dcebca-5543-4177-9c2a-4dc0687212dd"
+DISCOVERY_COLLECTION_ID="39238ec1-0d1f-42eb-8b2e-bc08187cc536"
+## Un-comment and use either username+password or IAM apikey.
+# DISCOVERY_USERNAME=<add_discovery_username>
+# DISCOVERY_PASSWORD=<add_discovery_password>
+DISCOVERY_IAM_APIKEY="fNRl9bmiLGsAMEgV1Kq57bZ90N5SIvZDsXkKo6F3r58Y"
+EBAY_STORE_DISCO_COLLECTION_ID="39238ec1-0d1f-42eb-8b2e-bc08187cc536"
+#EBAY_STORE_DISCO_SCORE_FILTER="0.0"
+DISCOVERY_DATA_SOURCE="EBAY_STORE"
+
+# Slack
+SLACK_BOT_TOKEN="xoxb-452348772512-454452652310-5rqOwe7E3CHgbvIRG0pkZhyL"
+SLACK_BOT_USER="aarush"

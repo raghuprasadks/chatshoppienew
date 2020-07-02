@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: Flask-Passlib
+Version: 0.1
+Summary: Flask extension for passlib
+Home-page: https://github.com/allanlei/flask-passlib
+Author: Allan Lei
+Author-email: allanlei@helveticode.com
+License: BSD
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Flask
+Requires-Dist: passlib (==1.6.1)
+Requires-Dist: Werkzeug (>=0.6.1)
+
+
+Flask-Passlib
+----------
+
+Please refer to the online documentation for details.
+
+Links
+`````
+
+* `documentation <https://github.com/allanlei/flask-passlib>`_
+
+

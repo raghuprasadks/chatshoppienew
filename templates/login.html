@@ -1,0 +1,104 @@
+ <!DOCTYPE HTML>
+ <html>
+ <head>
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="stylesheet" type ="text/css" href="{{url_for('static', filename='css/bot.css') }}">
+     <link rel="style" type="css" href="{{url_for('static',filename='css/tooltip.css')}}">
+     <title>Chatshoppie Web UI</title>
+     <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+     <script type="text/javascript" src="//cdn.ywxi.net/js/1.js" async></script> 
+     <script type="text/javascript" charset="utf-8">
+         $(document).ready(function() {
+             // Namespace here needs to match the one used in app.py
+             namespace = '/AMQ';
+             // Connect via Flask SocketIO
+                         
+             var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
+             // Display message from the WOS bot
+             socket.on('my_response', function(msg) {                    
+                          
+                      
+                 displayMessage(msg.data, 'Bot');
+                 //displayImage(msg.image1);
+                 displayButtonImage(msg.image);
+                 
+                
+                 
+                                          
+             }),
+
+             // Send message to the WOS bot
+             $('form#emit').submit(function(event) {
+                 socket.emit('my_event', {data: $('#emit_data').val()});            
+                 // Display sent from user on the right side
+                 displayMessage($('#emit_data').val(), 'NotWatsonBot');
+                 $("#emit")[0].reset();
+                 return false;
+             });
+         });
+
+
+         
+     </script>
+ </head>
+ <body>
+ <div class="container">
+     <div class="chatbot">
+         <div id="chatBox" class="dialogContainer">
+             
+             
+            <p class="text-center">Welcome to <strong><font color="#32cd32">Chatshoppie.com (version 1.0)</font></strong> The ONE STOP SHOP for all shopping. We currently cover areas like<font color="#32cd32">-Fashion & Clothing-</font> <strong><font color="#32cd32">Women's-Trench Coats</font></strong>.We will be adding more areas at the earliest. Thank you and Happy Chat-Shopping..</p> 
+            
+            <div align="right">
+                
+                <p> Click Logout to exit Chat <a href = "{{url_for('logout')}}" data-toggle="tooltip" data-placement="top" title="Thank you for choosing Chatshoppie, see you soon.."> <button>LOGOUT</button></a></p>
+              
+            </div>
+            
+            <div align="left">
+
+                <p> <input type="button" value="REFRESH"  onclick="document.location.reload(true)"> Click Refresh to clear chat</p>
+                
+
+            </div>
+           
+
+         </div>
+         
+         <form id="emit" method="POST" action="#">
+             <!-- Use a form to get input. Flask template style. -->
+             <!-- Use class="dialogInput, to style it like the output. -->
+             <input class="dialogInput" type="text" name="emit_data" id="emit_data" autofocus="autofocus" placeholder="Type 'hi' to start">
+         </form>
+     </div>
+ </div>
+ <!-- Use bot.js to give us a nice chatbot UI. -->
+ 
+ <script src="{{url_for('static',filename='src/bot.js')}}"></script>
+
+ <!--test for accordion-->
+ <h2>Accordion  Testing</h2>
+
+ <button id="ebay" class="accordion">Ebay</button>
+ <div class="panel">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ </div>
+
+ <button id="amazon" class="accordion">Amazon</button>
+ <div class="panel">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ </div>
+
+ <button class="accordion">Iconic</button>
+ <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ </div>
+
+ </body>
+
+ </html>

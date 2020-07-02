@@ -1,0 +1,120 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Chatshoppie | Register
+{% endblock %}
+
+{% block styles %}
+
+{{super()}}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="clevex - A fully responsive, HTML5 based admin theme">
+<meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, clevex, web design, CSS3">
+<title>Chatshoppie | Register</title>	
+<!-- Site favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
+<!-- /site favicon -->
+
+<!-- Material design icons stylesheet -->
+<link href="css/material-design-iconic-font.min.css" rel="stylesheet">
+<!-- /material design icons stylesheet -->
+
+<!-- Owl carousel -->
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/owl.theme.default.min.css" rel="stylesheet">
+<!-- /owl carousel -->
+
+<!-- Bootstrap stylesheet min version -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- /bootstrap stylesheet min version -->
+
+<!-- REVOLUTION STYLE SHEETS -->
+<link rel="stylesheet" type="text/css" href="rev-slider/css/settings.css">
+<link rel="stylesheet" type="text/css" href="rev-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" type="text/css" href="rev-slider/fonts/font-awesome/css/font-awesome.css">
+<!-- REVOLUTION LAYERS STYLES -->
+
+<!-- Animated Css stylesheet -->
+<link href="css/animate.css" rel="stylesheet">
+<!-- /animated css stylesheet -->
+
+<!-- clevex core stylesheet -->
+<link href="css/clevex-core.css" rel="stylesheet">
+<!-- /clevex core stylesheet -->
+
+<link href="css/clevex-forms.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+	<div class="login-container">
+		<div class="login-content text-center animation bounceInDown">
+			
+			
+			
+			<form class="form-signin" method="POST" action="/signup">
+
+				<h2 class = "form-signin-heading">Register here... it's easy</h2>
+				<!--
+				{% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <p><span class="label">{{ message }}</span></p>  
+               {% endfor %}  
+         {% endif %}  
+	  {% endwith %}	-->
+<!--
+	  {% with messages = get_flashed_messages(with_categories=true) %}
+	  {% for category, message in messages %}
+		<div class="{{ category }}">{{ message }}</div>
+	  {% endfor %}
+	{% endwith %} -->
+
+	{% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <p><span class="label label-danger">{{ message }}</span></p>  
+               {% endfor %}  
+         {% endif %}  
+	  {% endwith %}
+				{{ form.hidden_tag() }}
+				{{ wtf.form_field(form.name) }}
+				{{ wtf.form_field(form.email) }}
+				{{ wtf.form_field(form.mobile) }}
+				{{ wtf.form_field(form.password) }}
+				
+				
+				
+				
+				<button class="btn btn-primary btn-rounded" type="submit"> Register</button>
+				
+				
+				
+			</form>
+			
+			
+		</div>
+	</div>
+	<!--Load JQuery-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.waypoints.js"></script>
+	<script src="js/functions.js"></script>
+	
+	
+{% endblock %}

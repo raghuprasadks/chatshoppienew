@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pythonanywhere
+Version: 0.7.4
+Summary: PythonAnywhere helper tools for users
+Home-page: https://github.com/pythonanywhere/helper_scripts/
+Author: PythonAnywhere LLP
+Author-email: developers@pythonanywhere.com
+License: MIT
+Keywords: pythonanywhere api cloud web hosting
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: docopt
+Requires-Dist: requests
+Requires-Dist: python-dateutil
+
+[![Build Status](https://travis-ci.org/pythonanywhere/helper_scripts.svg?branch=master)](https://travis-ci.org/pythonanywhere/helper_scripts)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+# PythonAnywhere helper scripts
+
+These scripts are designed to be run from PythonAnywhere consoles
+
+
+## Installing
+
+
+    pip3.5 install --user pythonanywhere
+
+
+## Contributing
+
+Pull requests are welcome!  You'll find tests in the [tests](tests) folder...
+
+    # prep your dev environment
+    mkvirtualenv --python=python3.5 helper_scripts
+    pip install -r requirements.txt
+    pip install -e .
+
+    # running the tests:
+    pytest
+
+    # make sure that the code that you have written is well tested:
+    pytest --cov=pythonanywhere --cov=scripts
+
+    # to just run the fast tests:
+    pytest -m 'not slowtest' -v
+
+

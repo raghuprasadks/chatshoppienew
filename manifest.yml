@@ -1,0 +1,30 @@
+---
+applications:
+  - name: Chatshoppie
+    memory: 256M
+    instances: 1
+    x: 3.6.7
+    command: python app.py
+    routes:
+    - route: amq.au-syd.mybluemix.net
+    - route: www.chatshoppie.com
+    timeout: 180
+    health-check-type: process
+    API endpoint: https://api.au-syd.bluemix.net
+    buildpack: https://github.com/cloudfoundry/python-buildpack.git
+    disk_quota: 1024M
+    services:
+      - AMQ_Assistant
+      - AMQ_DB
+      - AMQ_Discovery
+    env:
+      CLOUDANT_DB_NAME: AMQ_DB  
+      FLASK_ENV: production
+      
+      
+     
+      
+    
+
+      
+      

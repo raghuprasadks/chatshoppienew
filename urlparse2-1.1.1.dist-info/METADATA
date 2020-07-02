@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: urlparse2
+Version: 1.1.1
+Summary: urlparse for humans.
+Home-page: https://github.com/mwhooker/urlparse2
+Author: Matthew Hooker & Jeremy Avnet & Matt Chisholm
+Author-email: mwhooker@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: recordtype
+
+A drop-in replacement for urlparse with enhancements.Provides mutable ParseResult fields and error handling for invaliddomains passed to urljoin.
+
+
