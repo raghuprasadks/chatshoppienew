@@ -4,7 +4,7 @@ gunicorn = "==19.3.0"
 itsdangerous = "==0.24"
 Jinja2 = "==2.7.2"
 MarkupSafe = "==1.0"
-Werkzeug = "==0.10.4"
+Werkzeug = "==0.15.3"
 
 [requires]
 python_version='2.7'
