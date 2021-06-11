@@ -71,7 +71,7 @@ visitor==0.1.3
 w3lib==1.20.0
 watson-developer-cloud==2.4.1
 websocket-client==0.47.0
-websockets==7.0
+websockets==9.1
 Werkzeug==0.14.1
 wrapt==1.10.11
 WSGIUtils==0.7.1
